@@ -6,11 +6,11 @@ import androidx.room.Insert
 import androidx.room.Query
 
 @Dao
-interface Points_DAO {
+interface PointsDAO {
     @Query("SELECT * FROM points")
-    fun getAll(): List<points>
+    fun getAll(): List<Points>
     @Insert
-    fun insertAll(Points: List<points>)
+    fun insertAll(Points: List<Points>)
     @Delete
-    fun delete(Points: points)
+    fun delete(points: Points)
 }

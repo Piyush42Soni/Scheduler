@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "points")
-data class points(
+data class Points(
     @PrimaryKey
     val uid: Int,
     @ColumnInfo(name = "Date")
@@ -27,5 +27,4 @@ data class points(
     @ColumnInfo(name="Book")
     val Book:Boolean
     ){
-
 }

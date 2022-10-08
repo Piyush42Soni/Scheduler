@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.scheduler.Fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/BebasNeueRegular"
+        android:padding="15dp"
+        android:text="@string/scheduler"
+        android:textAlignment="center"
+        android:textColor="@color/purple_500"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ThemeButton"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:padding="15dp"
+        android:text="@string/add_data"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_input"
+        app:iconSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <Button
+        android:id="@+id/ThemeButton2"
+        android:layout_width="370dp"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/teal_200"
+        android:padding="15dp"
+        android:text="@string/yearly"
+        android:textColor="#546E7A"
+        android:textSize="20sp"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_star"
+        app:iconSize="50dp"
+        app:iconTint="#546E7A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.365"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ThemeButton"
+        app:layout_constraintVertical_bias="0.302" />
+
+    <Button
+        android:id="@+id/ThemeButton3"
+        android:layout_width="180dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:backgroundTint="#3F5CEF"
+        android:padding="15dp"
+        android:text="@string/monthly"
+        android:textSize="16sp"
+        app:cornerRadius="30dp"
+        app:icon="@drawable/ic_month"
+        app:iconSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/ThemeButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/ThemeButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.889" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
