@@ -3,11 +3,12 @@ package com.example.scheduler.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.time.LocalTime
 
 @Entity(tableName = "points")
 data class Points(
-    @PrimaryKey
-    val uid: Int,
+    @PrimaryKey(autoGenerate = true)
+    val uid: Int=0,
     @ColumnInfo(name = "Date")
     val Date: String?,
     @ColumnInfo(name = "Calories_burnt")
@@ -18,13 +19,10 @@ data class Points(
     val Coding_Questions:Int,
     @ColumnInfo(name="CollegeStudy")
     val CollegeStudy:Float,
-    @ColumnInfo(name="Sleep")
-    val Sleep:Boolean,
     @ColumnInfo(name="Wake_Up")
-    val Wake:Boolean,
+    val Wake:LocalTime,
     @ColumnInfo(name="NP")
     val NP:Boolean,
     @ColumnInfo(name="Book")
     val Book:Boolean
-    ){
-}
+    )

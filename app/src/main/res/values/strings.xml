@@ -11,4 +11,9 @@
     <string name="exercise">Exercise</string>
     <string name="code">Coding</string>
     <string name="study">Study</string>
+    <string name="phone">Screen Time</string>
+    <string name="wakeup">Wake Up Time</string>
+    <string name="book">Book Pages Read</string>
+    <string name="clearButton">Clear All</string>
+    <string name="submit">Submit</string>
 </resources>
