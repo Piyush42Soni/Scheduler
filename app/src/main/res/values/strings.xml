@@ -3,7 +3,12 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="monthly">Monthly Data</string>
-    <string name="yearly">Yearly Data</string>
+    <string name="yearly">Change Goal</string>
     <string name="scheduler">Scheduler</string>
     <string name="add_data">Add Data</string>
+    <string name="password">Password</string>
+    <string name="hello_first_fragment">Scheduler</string>
+    <string name="exercise">Exercise</string>
+    <string name="code">Coding</string>
+    <string name="study">Study</string>
 </resources>
