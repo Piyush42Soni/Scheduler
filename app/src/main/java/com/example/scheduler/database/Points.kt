@@ -20,7 +20,7 @@ data class Points(
     @ColumnInfo(name="CollegeStudy")
     val CollegeStudy:Float,
     @ColumnInfo(name="Wake_Up")
-    val Wake:LocalTime,
+    val Wake:Int,
     @ColumnInfo(name="NP")
     val NP:Boolean,
     @ColumnInfo(name="Book")
