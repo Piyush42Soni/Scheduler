@@ -10,7 +10,9 @@ interface PointsDAO {
     @Query("SELECT * FROM points")
     fun getAll(): List<Points>
     @Insert
-    fun insertAll(Points: List<Points>)
+    fun insert(points: Points)
     @Delete
     fun delete(points: Points)
+    @Query("SELECT * FROM points where Date=:data LIMIT 1")
+    fun find(data:String):Points
 }

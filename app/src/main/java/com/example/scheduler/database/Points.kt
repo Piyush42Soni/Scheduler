@@ -3,6 +3,7 @@ package com.example.scheduler.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import dagger.hilt.android.HiltAndroidApp
 import java.time.LocalTime
 
 @Entity(tableName = "points")
