@@ -9,8 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.NavHostFragment
 import com.example.scheduler.R
 import com.example.scheduler.databinding.FragmentHomeBinding
+import dagger.hilt.android.scopes.FragmentScoped
 import java.util.zip.Inflater
-
+@FragmentScoped
 class HomeFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

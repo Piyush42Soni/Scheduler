@@ -5,15 +5,17 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import dagger.hilt.android.HiltAndroidApp
 import java.time.LocalTime
+import java.time.OffsetDateTime
+import java.util.*
 
 @Entity(tableName = "points")
 data class Points(
     @PrimaryKey(autoGenerate = true)
     val uid: Int=0,
     @ColumnInfo(name = "Date")
-    val Date: String?,
+    val Date: OffsetDateTime? = null,
     @ColumnInfo(name = "Calories_burnt")
-    val Calories_burnt: String?,
+    val Calories_burnt: Float,
     @ColumnInfo(name="ScreenTime")
     val ScreenTime:Float,
     @ColumnInfo(name="Coding_Questions")
@@ -25,5 +27,5 @@ data class Points(
     @ColumnInfo(name="NP")
     val NP:Boolean,
     @ColumnInfo(name="Book")
-    val Book:Boolean
+    val Book:Int
     )

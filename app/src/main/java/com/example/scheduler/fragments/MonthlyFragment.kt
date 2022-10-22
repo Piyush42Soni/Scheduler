@@ -6,7 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.scheduler.R
+import dagger.hilt.android.scopes.FragmentScoped
 
+@FragmentScoped
 class MonthlyFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

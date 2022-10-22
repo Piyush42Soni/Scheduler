@@ -11,7 +11,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.scheduler.R
 import com.example.scheduler.databinding.FragmentLoginBinding
+import dagger.hilt.android.scopes.FragmentScoped
 
+@FragmentScoped
 class LoginFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
