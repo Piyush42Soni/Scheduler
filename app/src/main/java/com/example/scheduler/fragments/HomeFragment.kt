@@ -25,6 +25,9 @@ class HomeFragment : Fragment() {
         binding.ThemeButton.setOnClickListener {
             NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_inputFragment)
         }
+        binding.ThemeButton3.setOnClickListener {
+            NavHostFragment.findNavController(this).navigate(R.id.action_homeFragment_to_monthlyFragment)
+        }
         return binding.root
     }
 }

@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.text.isDigitsOnly
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import com.example.scheduler.MonthlyAdapter
 import com.example.scheduler.R
 import com.example.scheduler.database.Points
 import com.example.scheduler.databinding.FragmentInputBinding
@@ -20,6 +21,7 @@ import kotlinx.coroutines.*
 import java.time.LocalDate.now
 import java.time.OffsetDateTime
 import java.util.Calendar
+import javax.inject.Inject
 
 @FragmentScoped
 @AndroidEntryPoint
@@ -60,6 +62,15 @@ class InputFragment : Fragment() {
                     Toast.makeText(context, "Fill all data", Toast.LENGTH_SHORT).show()
                 }
             }
+        }
+        binding.submitButton.setOnClickListener {
+            binding.BookText.setText("")
+            binding.codeText.setText("")
+            binding.studyText.setText("")
+            binding.exerciseText.setText("")
+            binding.screenTime.setText("")
+            binding.wakeText.setText("")
+
         }
         return binding.root
     }

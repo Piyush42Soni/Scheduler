@@ -15,7 +15,7 @@
         android:fontFamily="@font/orbitronbold"
         android:text="@string/hello_first_fragment"
         android:textColor="@color/purple_500"
-        android:textSize="66sp"
+        android:textSize="@dimen/_42sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"

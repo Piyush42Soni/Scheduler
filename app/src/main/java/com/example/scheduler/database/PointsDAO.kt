@@ -7,7 +7,7 @@ import androidx.room.Query
 
 @Dao
 interface PointsDAO {
-    @Query("SELECT * FROM points ORDER BY datetime(DATE)")
+    @Query("SELECT * FROM points")
     fun getAll(): List<Points>
     @Insert
     fun insert(points: Points)
