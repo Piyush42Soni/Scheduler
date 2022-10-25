@@ -7,7 +7,7 @@ import androidx.room.Query
 
 @Dao
 interface PointsDAO {
-    @Query("SELECT * FROM points")
+    @Query("SELECT * FROM points order by uid limit 30")
     fun getAll(): List<Points>
     @Insert
     fun insert(points: Points)

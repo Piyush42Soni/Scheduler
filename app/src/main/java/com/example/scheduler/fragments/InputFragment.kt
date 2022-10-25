@@ -63,7 +63,7 @@ class InputFragment : Fragment() {
                 }
             }
         }
-        binding.submitButton.setOnClickListener {
+        binding.clearButton.setOnClickListener {
             binding.BookText.setText("")
             binding.codeText.setText("")
             binding.studyText.setText("")
