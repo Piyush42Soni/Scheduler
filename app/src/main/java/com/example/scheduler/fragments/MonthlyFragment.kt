@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2022.
+ * All Rights Reserved
+ */
+
 package com.example.scheduler.fragments
 
 import android.os.Bundle

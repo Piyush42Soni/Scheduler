@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2022.
+ * All Rights Reserved
+ */
+
 package com.example.scheduler.database.repo
 
 import android.content.Context

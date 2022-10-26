@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2022.
+ * All Rights Reserved
+ */
+
 package com.example.scheduler
 
 import androidx.test.platform.app.InstrumentationRegistry
