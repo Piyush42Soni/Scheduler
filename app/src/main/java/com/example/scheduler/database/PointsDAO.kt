@@ -7,8 +7,10 @@ import androidx.room.Query
 
 @Dao
 interface PointsDAO {
-    @Query("SELECT * FROM points order by uid limit 30")
+    @Query("SELECT * FROM points order by datetime(Date) limit 30")
     fun getAll(): List<Points>
+    @Query("SELECT * FROM points order by datetime(Date) desc limit 1")
+    fun getone(): Points
     @Insert
     fun insert(points: Points)
     @Delete

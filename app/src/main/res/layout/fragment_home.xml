@@ -18,7 +18,7 @@
             android:fontFamily="@font/orbitronbold"
             android:padding="15dp"
             android:text="@string/add_data"
-            android:textSize="20sp"
+            android:textSize="@dimen/_19sdp"
             app:cornerRadius="30dp"
             app:icon="@drawable/ic_input"
             app:iconSize="50dp"
@@ -35,7 +35,7 @@
             android:padding="15dp"
             android:text="@string/yearly"
             android:textColor="#546E7A"
-            android:textSize="24sp"
+            android:textSize="@dimen/_22sdp"
             app:cornerRadius="30dp"
             app:icon="@drawable/ic_star"
             app:iconSize="50dp"
@@ -56,7 +56,7 @@
             android:fontFamily="@font/orbitronbold"
             android:padding="15dp"
             android:text="@string/monthly"
-            android:textSize="15sp"
+            android:textSize="@dimen/_11sdp"
             app:cornerRadius="30dp"
             app:icon="@drawable/ic_month"
             app:iconSize="50dp"
@@ -67,27 +67,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
-            android:layout_width="198dp"
-            android:layout_height="204dp"
-            android:padding="15dp"
-            android:progressTint="#E60707"
-            app:layout_constraintBottom_toTopOf="@+id/ThemeButton3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="@+id/progressBar"
-            app:layout_constraintEnd_toEndOf="@+id/progressBar"
-            app:layout_constraintStart_toStartOf="@+id/progressBar"
-            app:layout_constraintTop_toTopOf="@+id/progressBar" />
+            android:text="@string/infoHai"
+            android:textColor="#EC0909"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ThemeButton2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

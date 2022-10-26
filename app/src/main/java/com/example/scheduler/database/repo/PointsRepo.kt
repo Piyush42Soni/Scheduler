@@ -11,4 +11,5 @@ class PointsRepo @Inject constructor(
     suspend fun insertAll(points: Points) = pointsDAO.insert(points)
     suspend fun Delete(points: Points) = pointsDAO.delete(points)
     suspend fun Find(date: String) = pointsDAO.find(date)
+    suspend fun getone()=pointsDAO.getone()
 }

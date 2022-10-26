@@ -30,6 +30,7 @@ class InputFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
     private val viewModel: InputFragmentViewModel by viewModels()
+    private lateinit var points:Points
     @OptIn(DelicateCoroutinesApi::class)
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
@@ -37,6 +38,7 @@ class InputFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding=DataBindingUtil.inflate<FragmentInputBinding>(inflater,R.layout.fragment_input, container, false)
+        var b=true
         binding.submitButton.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
                 if ((binding.BookText.text.toString().isDigitsOnly())
@@ -56,8 +58,22 @@ class InputFragment : Fragment() {
                         Wake = binding.wakeText.text.toString().toInt(),
                         NP = binding.NPicon.isChecked
                     )
-                    withContext(Dispatchers.Default) { viewModel.Insert(point)}
-                    Toast.makeText(context, "Data saved", Toast.LENGTH_SHORT).show()
+                    withContext(Dispatchers.Default) {
+                        points=viewModel.getone()
+                        if(points.Date?.dayOfMonth!=point.Date?.dayOfMonth) {
+                            viewModel.Insert(point)
+                            b=true
+                        }
+                        else {
+                            b = false
+                        }
+                    }
+                    if(b) {
+                        Toast.makeText(context, "Data saved", Toast.LENGTH_SHORT).show()
+                    }
+                    else{
+                        Toast.makeText(context, "Today's Data already saved", Toast.LENGTH_SHORT).show()
+                    }
                 } else {
                     Toast.makeText(context, "Fill all data", Toast.LENGTH_SHORT).show()
                 }

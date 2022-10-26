@@ -8,6 +8,6 @@
     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:spanCount="5"
+    app:spanCount="4"
     />
 </layout>

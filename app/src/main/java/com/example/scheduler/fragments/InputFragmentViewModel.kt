@@ -18,5 +18,6 @@ class InputFragmentViewModel @Inject constructor(
         return repository.Delete(points)
     }
     suspend fun getAll() = repository.getAll()
+    suspend fun getone()=repository.getone()
     suspend fun Find(date: String) = repository.Find(date)
 }

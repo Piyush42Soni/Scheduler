@@ -16,4 +16,5 @@
     <string name="book">Book Pages Read</string>
     <string name="clearButton">Clear All</string>
     <string name="submit">Submit</string>
+    <string name="infoHai">*You can enter data one time a day so please add data accordingly</string>
 </resources>
