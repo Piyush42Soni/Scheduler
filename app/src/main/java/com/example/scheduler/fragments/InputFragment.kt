@@ -7,7 +7,6 @@ package com.example.scheduler.fragments
 
 import android.os.Build
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,18 +14,15 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.text.isDigitsOnly
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.scheduler.MonthlyAdapter
 import com.example.scheduler.R
 import com.example.scheduler.database.Points
 import com.example.scheduler.databinding.FragmentInputBinding
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.scopes.FragmentScoped
 import kotlinx.coroutines.*
-import java.time.LocalDate.now
 import java.time.OffsetDateTime
-import java.util.Calendar
-import javax.inject.Inject
 
 @FragmentScoped
 @AndroidEntryPoint
@@ -35,7 +31,6 @@ class InputFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
     private val viewModel: InputFragmentViewModel by viewModels()
-    private lateinit var points:Points
     @OptIn(DelicateCoroutinesApi::class)
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
@@ -64,13 +59,17 @@ class InputFragment : Fragment() {
                         NP = binding.NPicon.isChecked
                     )
                     withContext(Dispatchers.Default) {
-                        points=viewModel.getone()
-                        if(points.Date?.dayOfMonth!=point.Date?.dayOfMonth) {
+                        val points=viewModel.getone()
+
+                        b = if(points==null){
                             viewModel.Insert(point)
-                            b=true
+                            true
                         }
-                        else {
-                            b = false
+                        else if(points.Date?.dayOfMonth!=point.Date?.dayOfMonth) {
+                            viewModel.Insert(point)
+                            true
+                        } else {
+                            false
                         }
                     }
                     if(b) {
